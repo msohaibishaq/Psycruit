@@ -1,0 +1,333 @@
+body{
+  		
+    font-size: 15px;
+    line-height: 30px;
+  color: #222;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif;
+}
+
+#primaryNav{
+    top: -50px;
+    transition: top 0.5s;
+}
+
+ul{
+    padding-right: 30px;
+}
+
+.navbar-header{
+    padding-left: 15px;
+}
+
+#home h1 {
+font-size: 8em;
+font-weight: 800;
+margin: 30px auto;
+color: #f1f1f1;
+}
+
+#home {
+  
+  background: url("https://i0.wp.com/iammagnus.com/wp-content/uploads/2016/05/website-design-background-1.jpg?fit=1920%2C1080&ssl=1") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+#home h3 {
+font-size: 2em;
+color: #f1f1f1;
+padding-bottom: 5px;
+border-bottom: 2px solid #f1f1f1;
+display: inline;
+font-weight: 500;
+line-height: 1.1;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+#home h1 span {
+color:#5F6161 ;
+}
+
+#home h2 {
+font-size: 1.7em;
+color: #ccc;
+padding: 10px;
+display: inline;
+font-weight: 300;
+text-transform: uppercase;
+}
+
+#home .grey-button {
+background-color: Transparent;
+cursor:pointer;
+overflow: hidden;
+border: 2px solid white;
+padding: 21px 34px;
+margin:5px;
+font-size: 15px;
+font-weight: 600;
+font-style: normal;
+text-transform: uppercase;
+letter-spacing: .1em;
+color: #ccc;
+transition: 0.5s;
+}
+
+#home .grey-button:hover {
+background-color:white;	
+text-decoration: none;
+}
+
+#about{
+text-align: center;	
+
+}
+
+.heading{
+font-weight: 600;
+text-transform: uppercase;
+font-size: 1.9em;
+
+}
+
+.slogan{
+color:#5F6161;
+text-transform: uppercase;
+font-weight: 300;
+font-size: 1.2em;
+}
+
+#about p{
+font-size:1.1em;
+}
+
+.section{
+padding: 100px 0;
+}
+
+.timeline {
+position: relative;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.timeline::after {
+content: '';
+position: absolute;
+width: 3px;
+background-color: #5F6161;
+top: 0;
+bottom: 0;
+left: 50%;
+}
+
+.contain {
+padding: 10px 40px;
+position: relative;
+background-color: inherit;
+width: 50%;
+}
+
+.contain::after {
+content: '';
+position: absolute;
+width: 25px;
+height: 25px;
+right: -9px;
+background-color: white;
+border: 2px solid #5F6161;
+top: 15px;
+border-radius: 50%;
+z-index: 1;
+}
+
+.start {
+width:65px;
+height: 65px;
+margin: 30px auto;
+text-align: center;
+background-color: white;
+border: 2px solid #5F6161;
+border-radius: 50%;
+z-index: 100;
+line-height: 58px;
+transform: translate(-4%,0);
+}
+
+.left {
+left: 0;
+}
+
+.right {
+left: 50%;
+}
+
+.left::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+right: 30px;
+border: medium solid black;
+border-width: 10px 0 10px 10px;
+border-color: transparent transparent transparent #efefef;
+}
+
+.right::before {
+content: " ";
+height: 0;
+position: absolute;
+top: 22px;
+width: 0;
+z-index: 1;
+left: 30px;
+border: medium solid white;
+border-width: 10px 10px 10px 0;
+border-color: transparent #efefef transparent transparent;
+}
+
+.right::after {
+left: -16px;
+}
+
+
+#education{
+
+}
+
+#education ul{
+list-style: none;
+}
+
+#education li{
+position: relative;
+}
+
+blockquote{
+background-color:#efefef;
+color:#4F4F4F;
+}
+
+.left > blockquote{
+  border-left-color: #5F6161;
+}
+
+.right > blockquote{
+  border-right-color: #5F6161;
+}
+
+#portfolio{
+  background-color:#293b4d;
+}
+
+.project-text {
+  background-color:#02A74D;
+  padding: 10px;
+  color:white;
+
+}	
+.btn {
+border-radius: 3px;
+padding: 15px 25px;
+background-color: #02A74D;
+}
+
+
+.specialities li{
+text-align: left;
+font-size: 17px;
+}
+
+#blog {
+background-color: #e5e5e5;
+}
+
+#blog h1{
+text-align: left;
+}
+
+.blog-text{
+padding: 25px 0;
+text-transform: uppercase;
+opacity: 1;
+}
+
+#blog .blog-div{
+margin:5px;
+display: inline-block;
+position: relative;
+}
+
+#blog a:link {
+color: black;
+}
+
+#blog a:hover {
+color: white;
+}
+
+@media only screen and (max-height: 800px) {
+#home h1 {
+  font-size: 5em;
+}
+}
+
+@media only screen and (max-width: 430px) {
+#home .grey-button {
+  padding: 10px 20px;
+}
+
+.profile-photo{
+  height:50vh;
+}
+}
+
+@media screen and (max-width: 600px) {
+.timeline::after {
+left: 31px;
+}
+
+.contain {
+width: 100%;
+padding-left: 70px;
+padding-right: 25px;
+}
+
+.left::after, .right::after {
+left: -20px;
+}
+
+
+.right {
+left: 0%;
+}
+
+.contain::before {
+left: 60px;
+border: medium solid #efefef;
+border-width: 10px 10px 10px 0;
+border-color: transparent #efefef transparent transparent;
+}
+
+.left > blockquote{
+    border-left: none;
+    border-right-color: #5F6161;
+    border-right: 5px solid;	
+}
+
+}	
+
+#contact{
+background-color: #191919;
+color: white;
+
+}
+
+#contact fa {
+font-size:30px; color: #0081c1; padding-right: 5px
+}
