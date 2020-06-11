@@ -1,261 +1,871 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<!-- Required Meta tags -->
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    svg:not(:root).svg-inline--fa {
+      overflow: visible
+    }
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    .svg-inline--fa {
+      display: inline-block;
+      font-size: inherit;
+      height: 1em;
+      overflow: visible;
+      vertical-align: -.125em
+    }
 
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
+    .svg-inline--fa.fa-lg {
+      vertical-align: -.225em
+    }
 
+    .svg-inline--fa.fa-w-1 {
+      width: .0625em
+    }
+
+    .svg-inline--fa.fa-w-2 {
+      width: .125em
+    }
+
+    .svg-inline--fa.fa-w-3 {
+      width: .1875em
+    }
+
+    .svg-inline--fa.fa-w-4 {
+      width: .25em
+    }
+
+    .svg-inline--fa.fa-w-5 {
+      width: .3125em
+    }
+
+    .svg-inline--fa.fa-w-6 {
+      width: .375em
+    }
+
+    .svg-inline--fa.fa-w-7 {
+      width: .4375em
+    }
+
+    .svg-inline--fa.fa-w-8 {
+      width: .5em
+    }
+
+    .svg-inline--fa.fa-w-9 {
+      width: .5625em
+    }
+
+    .svg-inline--fa.fa-w-10 {
+      width: .625em
+    }
+
+    .svg-inline--fa.fa-w-11 {
+      width: .6875em
+    }
+
+    .svg-inline--fa.fa-w-12 {
+      width: .75em
+    }
+
+    .svg-inline--fa.fa-w-13 {
+      width: .8125em
+    }
+
+    .svg-inline--fa.fa-w-14 {
+      width: .875em
+    }
+
+    .svg-inline--fa.fa-w-15 {
+      width: .9375em
+    }
+
+    .svg-inline--fa.fa-w-16 {
+      width: 1em
+    }
+
+    .svg-inline--fa.fa-w-17 {
+      width: 1.0625em
+    }
+
+    .svg-inline--fa.fa-w-18 {
+      width: 1.125em
+    }
+
+    .svg-inline--fa.fa-w-19 {
+      width: 1.1875em
+    }
+
+    .svg-inline--fa.fa-w-20 {
+      width: 1.25em
+    }
+
+    .svg-inline--fa.fa-pull-left {
+      margin-right: .3em;
+      width: auto
+    }
+
+    .svg-inline--fa.fa-pull-right {
+      margin-left: .3em;
+      width: auto
+    }
+
+    .svg-inline--fa.fa-border {
+      height: 1.5em
+    }
+
+    .svg-inline--fa.fa-li {
+      width: 2em
+    }
+
+    .svg-inline--fa.fa-fw {
+      width: 1.25em
+    }
+
+    .fa-layers svg.svg-inline--fa {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0
+    }
+
+    .fa-layers {
+      display: inline-block;
+      height: 1em;
+      position: relative;
+      text-align: center;
+      vertical-align: -.125em;
+      width: 1em
+    }
+
+    .fa-layers svg.svg-inline--fa {
+      -webkit-transform-origin: center center;
+      transform-origin: center center
+    }
+
+    .fa-layers-counter,
+    .fa-layers-text {
+      display: inline-block;
+      position: absolute;
+      text-align: center
+    }
+
+    .fa-layers-text {
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transform-origin: center center;
+      transform-origin: center center
+    }
+
+    .fa-layers-counter {
+      background-color: #ff253a;
+      border-radius: 1em;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #fff;
+      height: 1.5em;
+      line-height: 1;
+      max-width: 5em;
+      min-width: 1.5em;
+      overflow: hidden;
+      padding: .25em;
+      right: 0;
+      text-overflow: ellipsis;
+      top: 0;
+      -webkit-transform: scale(.25);
+      transform: scale(.25);
+      -webkit-transform-origin: top right;
+      transform-origin: top right
+    }
+
+    .fa-layers-bottom-right {
+      bottom: 0;
+      right: 0;
+      top: auto;
+      -webkit-transform: scale(.25);
+      transform: scale(.25);
+      -webkit-transform-origin: bottom right;
+      transform-origin: bottom right
+    }
+
+    .fa-layers-bottom-left {
+      bottom: 0;
+      left: 0;
+      right: auto;
+      top: auto;
+      -webkit-transform: scale(.25);
+      transform: scale(.25);
+      -webkit-transform-origin: bottom left;
+      transform-origin: bottom left
+    }
+
+    .fa-layers-top-right {
+      right: 0;
+      top: 0;
+      -webkit-transform: scale(.25);
+      transform: scale(.25);
+      -webkit-transform-origin: top right;
+      transform-origin: top right
+    }
+
+    .fa-layers-top-left {
+      left: 0;
+      right: auto;
+      top: 0;
+      -webkit-transform: scale(.25);
+      transform: scale(.25);
+      -webkit-transform-origin: top left;
+      transform-origin: top left
+    }
+
+    .fa-lg {
+      font-size: 1.3333333333em;
+      line-height: .75em;
+      vertical-align: -.0667em
+    }
+
+    .fa-xs {
+      font-size: .75em
+    }
+
+    .fa-sm {
+      font-size: .875em
+    }
+
+    .fa-1x {
+      font-size: 1em
+    }
+
+    .fa-2x {
+      font-size: 2em
+    }
+
+    .fa-3x {
+      font-size: 3em
+    }
+
+    .fa-4x {
+      font-size: 4em
+    }
+
+    .fa-5x {
+      font-size: 5em
+    }
+
+    .fa-6x {
+      font-size: 6em
+    }
+
+    .fa-7x {
+      font-size: 7em
+    }
+
+    .fa-8x {
+      font-size: 8em
+    }
+
+    .fa-9x {
+      font-size: 9em
+    }
+
+    .fa-10x {
+      font-size: 10em
+    }
+
+    .fa-fw {
+      text-align: center;
+      width: 1.25em
+    }
+
+    .fa-ul {
+      list-style-type: none;
+      margin-left: 2.5em;
+      padding-left: 0
+    }
+
+    .fa-ul>li {
+      position: relative
+    }
+
+    .fa-li {
+      left: -2em;
+      position: absolute;
+      text-align: center;
+      width: 2em;
+      line-height: inherit
+    }
+
+    .fa-border {
+      border: solid .08em #eee;
+      border-radius: .1em;
+      padding: .2em .25em .15em
+    }
+
+    .fa-pull-left {
+      float: left
+    }
+
+    .fa-pull-right {
+      float: right
+    }
+
+    .fa.fa-pull-left,
+    .fab.fa-pull-left,
+    .fal.fa-pull-left,
+    .far.fa-pull-left,
+    .fas.fa-pull-left {
+      margin-right: .3em
+    }
+
+    .fa.fa-pull-right,
+    .fab.fa-pull-right,
+    .fal.fa-pull-right,
+    .far.fa-pull-right,
+    .fas.fa-pull-right {
+      margin-left: .3em
+    }
+
+    .fa-spin {
+      -webkit-animation: fa-spin 2s infinite linear;
+      animation: fa-spin 2s infinite linear
+    }
+
+    .fa-pulse {
+      -webkit-animation: fa-spin 1s infinite steps(8);
+      animation: fa-spin 1s infinite steps(8)
+    }
+
+    @-webkit-keyframes fa-spin {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+      }
+    }
+
+    @keyframes fa-spin {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+      }
+    }
+
+    .fa-rotate-90 {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg)
+    }
+
+    .fa-rotate-180 {
+      -webkit-transform: rotate(180deg);
+      transform: rotate(180deg)
+    }
+
+    .fa-rotate-270 {
+      -webkit-transform: rotate(270deg);
+      transform: rotate(270deg)
+    }
+
+    .fa-flip-horizontal {
+      -webkit-transform: scale(-1, 1);
+      transform: scale(-1, 1)
+    }
+
+    .fa-flip-vertical {
+      -webkit-transform: scale(1, -1);
+      transform: scale(1, -1)
+    }
+
+    .fa-flip-both,
+    .fa-flip-horizontal.fa-flip-vertical {
+      -webkit-transform: scale(-1, -1);
+      transform: scale(-1, -1)
+    }
+
+    :root .fa-flip-both,
+    :root .fa-flip-horizontal,
+    :root .fa-flip-vertical,
+    :root .fa-rotate-180,
+    :root .fa-rotate-270,
+    :root .fa-rotate-90 {
+      -webkit-filter: none;
+      filter: none
+    }
+
+    .fa-stack {
+      display: inline-block;
+      height: 2em;
+      position: relative;
+      width: 2.5em
+    }
+
+    .fa-stack-1x,
+    .fa-stack-2x {
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0
+    }
+
+    .svg-inline--fa.fa-stack-1x {
+      height: 1em;
+      width: 1.25em
+    }
+
+    .svg-inline--fa.fa-stack-2x {
+      height: 2em;
+      width: 2.5em
+    }
+
+    .fa-inverse {
+      color: #fff
+    }
+
+    .sr-only {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto
+    }
+
+    .svg-inline--fa .fa-primary {
+      fill: var(--fa-primary-color, currentColor);
+      opacity: 1;
+      opacity: var(--fa-primary-opacity, 1)
+    }
+
+    .svg-inline--fa .fa-secondary {
+      fill: var(--fa-secondary-color, currentColor);
+      opacity: .4;
+      opacity: var(--fa-secondary-opacity, .4)
+    }
+
+    .svg-inline--fa.fa-swap-opacity .fa-primary {
+      opacity: .4;
+      opacity: var(--fa-secondary-opacity, .4)
+    }
+
+    .svg-inline--fa.fa-swap-opacity .fa-secondary {
+      opacity: 1;
+      opacity: var(--fa-primary-opacity, 1)
+    }
+
+    .svg-inline--fa mask .fa-primary,
+    .svg-inline--fa mask .fa-secondary {
+      fill: #000
+    }
+
+    .fad.fa-inverse {
+      color: #fff
+    }
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/css/froala_blocks.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/froala-editor/css/froala_editor.pkgd.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/froala-editor/css/froala_style.min.css">
+  <style data-fp="">
+    body,
+    html {
+      margin: 0;
+      height: 100%;
+    }
+
+    body.no-block {
+      flex-flow: column;
+      overflow-x: hidden;
+      display: flex;
+    }
+
+    body {
+      background: #DEDEDE;
+    }
+
+    .fp-no-block {
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-direction: column;
+      cursor: pointer;
+      color: #444;
+      display: none;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      text-align: center;
+      background: #FFF;
+      transition: margin 0.25s linear 0.25s;
+    }
+
+    .fp-no-block:hover {
+      background: #EFEFEF;
+    }
+
+    .fp-no-block.fp-visible {
+      display: flex;
+    }
+
+    .fp-no-sections {
+      flex: 2;
+    }
+
+    .fp-no-block p {
+      margin: 0;
+    }
+
+    .fp-no-sections p+p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .fdb-block {
+      box-shadow: 0;
+      margin-bottom: 0;
+      transition: margin 0.25s linear 0.25s;
+    }
+
+    .fp-active {
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.14), 0 0px 6px rgba(0, 0, 0, 0.16);
+      -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.14), 0 0px 6px rgba(0, 0, 0, 0.16);
+      -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.14), 0 0px 6px rgba(0, 0, 0, 0.16);
+      z-index: 9999;
+    }
+
+    body.fp-add-view [data-block-type],
+    body.fp-add-view .fp-no-block {
+      margin-bottom: 20px;
+    }
+
+    body.fp-add-view [data-block-type] {
+      user-select: none;
+      position: relative;
+    }
+
+    body.fp-add-view section[data-block-type] {
+      cursor: move;
+    }
+
+    body.fp-add-view [data-block-type]:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: block;
+      z-index: 10000;
+      content: "";
+    }
+
+    .fp-drop-placeholder {
+      height: 200px;
+      width: 100%;
+      border: solid 10px #0098f7;
+      background: #FFF;
+      margin-bottom: 20px;
+    }
+
+    .fp-dragging {
+      display: none;
+    }
+
+    .fr-popup {
+      z-index: 10000 !important;
+    }
+
+    img.fr-dib {
+      margin: 5px auto;
+      display: block;
+      float: none;
+      vertical-align: top;
+    }
+
+    span.fr-emoticon.fr-emoticon-img {
+      background-repeat: no-repeat !important;
+      font-size: inherit;
+      height: 1em;
+      width: 1em;
+      min-height: 20px;
+      min-width: 20px;
+      display: inline-block;
+      margin: -.1em .1em .1em;
+      line-height: 1;
+      vertical-align: middle;
+    }
+  </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
+  <header class="bg-dark" data-block-type="headers" data-id="7">
+    <div class="container">
+      <nav class="navbar navbar-expand-md">
+        <div class="col">
+          <p><a class="navbar-brand" href="index.html"><img
+                src="img/Logo.png" height="30"
+                alt="image"></a></p>
+        </div>
 
-	<nav class="navbar navbar-inverse navbar-fixed-top" id="primaryNav">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand align-item-left" href="#"><img class="img-fluid" src="img/Logo.png" height="30" width="30"></a>
-				<a class="navbar-brand align-item-left" href="#"> Psycruit </a>
-			</div>
-			<div id="navBar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Home</a></li>
-				<li><a href="#about">About Us</a></li>
-				<li><a href="#education">Team</a></li>
-				<li><a href="#portfolio">Technology</a></li>
-				<li><a href="#blog">Features</a></li>
-				<li><a href="#contact">Contact</a></li>
-				</ul>	
-			</div>
-		</div>
-	</nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav11"
+          aria-controls="navbarNav11" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarNav11">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" contenteditable="false"
+                href="index.html">Home&nbsp;<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" contenteditable="false" href="#about">About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" contenteditable="false" href="#how">Process</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" contenteditable="false" href="#ft1">Features</a></li>
+            <li class="nav-item"><a class="nav-link" contenteditable="false" href="#team">Team</a>
+            </li>
+          </ul>
+          <p><a class="btn btn-outline-light ml-md-3" contenteditable="false" href="chat.html">Chat</a>
+          </p>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section id="home" class="fdb-block bg-dark"
+    style="background-image: url(https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//hero/purple.svg);"
+    data-block-type="call_to_action" data-id="8" draggable="true">
+    <div class="container justify-content-center align-items-center d-flex">
+      <div class="row justify-content-center text-center">
+        <div class="col-12 col-md-8">
+          <p><img alt="image" class="fdb-icon"
+              src="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//icons/coffee.svg"></p>
+          <h1>Select Your Category</h1>
+          <p class="lead">Based on your choice you'd be guided to a proper platform where you can be evaluated accordingly.</p>
+          <p class="mt-5">
+            <a class="btn btn-dark" href="chat.html">Teacher</a>
+            <a class="btn btn-dark" href="https://mycareerdreams.com/">Student</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id = "about" class="fdb-block" data-block-type="contents" data-id="1" draggable="true">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <h1>About Us</h1>
+          <div class="row text-left pt-4">
+            <div class="col-12 col-md-6">
+              <p class="lead">This software system will be a Psychology aware Chat-bot 
+                based Recruitment System for assisting different schools in their 
+                recruitment process.The system will highlight the importance of psychological 
+                evaluation before hiring for a teaching job. The candidates for the job will 
+                answer some questions while chatting with our chat-bot on our website. 
+                This process will better the recruitment system and make it more efficient.
+                Education is one of the most important sectors of our society. 
+                However, it is not given the importance it needs and some major shortcomings 
+               
+              </p>
+            </div>
+            <div class="col-12 col-md-6">
+              <p class="lead"> go unnoticed due to which our educational institutes do not yield the best 
+                productivity. One such factor is the psychological compatibility of the teachers 
+                which is ignored while hiring. The institutes at the primary and secondary 
+                levels cannot hire a psychologist only for recruitment. No such system exists 
+                which can perform this job. The education system can be made more efficient 
+                if such evaluation is done while the hiring is done. Our motive is to build a 
+                chat-bot that can psychologically evaluate the candidates and give us the best 
+                one for the job.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id= "how" class="dark fdb-block" data-block-type="features" data-id="4" draggable="true">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-12 col-md-8 m-auto col-lg-4">
+          <div class="fdb-box fdb-touch">
+            <i class="icon fas fa-comments"></i>
+            <h2>Step 1</h2>
+            <p>Uses intelligrent Chatbot to have relavant conversation</p>
+          </div>
+        </div>
 
-	<div id="home">
-		<br><br><br><br><br>
-		<h3> Welcome to </h3>
-		<h1>
-			Psycruit
-		</h1>
-		<h2> <span> Select your category </span></h2><br><br><br>
-		<a class="grey-button" href="#"> Teacher </a> 
-		<a class="grey-button" href="https://mycareerdreams.com/" target="_blank"> Student </a> 
-	</div>
+        <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
+          <div class="fdb-box fdb-touch">
+            <i class="icon fas fa-brain"></i>
+            <h2>Step 2</h2>
+            <p>The interview process is based on a Machine Learning Model</p>
+          </div>
+        </div>
 
-	<div id="about" class="section">
-		<div class="container"> 
-			<h2 class="heading"> About Us </h2>
-			<h3 class="slogan"> An intelligent Teacher Evaluating Chatbot </h3>
-			<br><br>
-			<div class="row">
-				<div class="col-md-5">
-					<iframe
-						allow="microphone;"
-						width="400"
-						height="450"
-						src="https://console.dialogflow.com/api-client/demo/embedded/31be4804-1d2f-48a8-9ac5-6f5eae8ea9a4">
-					</iframe>
-				</div>
-				<div class="col-md-7" style="font-family: Helvetica Neue ,Helvetica,Arial,sans-serif;">
-					<p> This software system will be a Psychology aware Chat-bot based Recruitment System 
-						for assisting different schools in their recruitment process. </p>
+        <div class="col-12 col-md-8 m-auto col-lg-4 pt-5 pt-lg-0">
+          <div class="fdb-box fdb-touch">
+            <i class="icon fas fa-calculator"></i>
+            <h2>Step 3</h2>
+            <p>After the interview, Results are efficiently calculated.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id = "ft1" class="fdb-block fp-active" data-block-type="contents" data-id="3" draggable="true">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 col-lg-5">
+          <h1>Bridging Gap</h1>
+          <p class="lead">Adding innovation to the repeated and tedious process to hire and focus effort only on the top candidates for teaching.</p>
+        </div>
+        <div class="col-12 col-md-6 ml-md-auto mt-4 mt-md-0">
+          <p><img alt="image" class="img-fluid"
+              src="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//shapes/2.svg"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="ft2" class="dark fdb-block" data-block-type="contents" data-id="2" draggable="true">
+    <div class="container">
+      <div class="row text-center align-items-center">
+        <div class="col-8 col-md-4">
+          <p><img alt="image" class="img-fluid"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTFdVbSV5TA-O4Gqy9P4Vr1SJPwV-pYYVCSfQK4R9gOlwqUo_jI&usqp=CAU"></p>
+        </div>
 
-					<p> The system will highlight the importance of psychological evaluation before hiring for a teaching job.
-						 The candidates for the job will answer some questions while chatting with our chat-bot on our website.
-						  This process will better the recruitment system and make it more efficient. </p>
+        <div class="col-4 col-md-2">
+          <div class="row">
+            <div class="col-12"><img alt="image" class="img-fluid"
+                src="data:image/jpeg;base64,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Mt7hERR0EREBERAREQEREBERBCIiyoiIqCIiAiIgIiICIioKUREEREBERAWVOoWmRvBH3/zdYog+iVNY46XSUaFK4OaRUqCndAcXTDyO0B8iR+lcR/RKjqrmAdpiG/ERGDM4zMz7rz2i19Wi4PpvLT9wR4c04cM7FfROlhteh61pDyIAc47D4wARLs2wfC6Tl4epL0fHi/y8k/QiXTp3MDAGgvJDXxyC7tkyMCVXqa2o0uttBhpBFNgIiAA0htw23mSrVANtY1jnOpOINru8XOgTaYAO2d4gSrlPUaOg5tZ8vqNuDKTcw4bOfPwjuwJ3BgYU063L224uv0zKcB7P4gHeATFxzaPBAIB95WvWdUfUuuDQCB2sFjWwIENGB/fKq6iu57i5xkkkn65WtZd5jxyIiI0IiICIiCEUoghFKhAREUBERBCIiyoiIqCIiAiIgIiKgpUKUQREQEREBERARFKo6f4YqhuqoEvsBJYXZA72uZBjg3R4znC+h0On1muc0vZc49wBcXBsHiIGByQvlK9D0D8W19O+XzWYYDg4kvj+V5zOeZ24WsbI8nqejlnzj+zrdXoudcdO0GpYPgDQYMh73bFrjkTznYheIX2boGh01Wk6rpqg9Ko1zLYDXNeSC4EnbMSPcHOF8r/Een9PVV2W22uHb4lrT+8z9Vcp+WfS9WZW4fo5qIiw9oiIgIiICIiAiIgIiIIRSoQEREEIiLCiIioIiICIiAiIqClQpRBERAREQERFQClAiAiIg95/+bfiFlJzdL6cOqE/xJul84lpi0AYxPleY/FWubX1eoqMADS6ARPfb23nO7rZxhUdFqjSe2o34hdG4glpbOPEz9FoCty404Y9DHHq3qT8/wC/oREUdxEUoIRSoQEREBERAREQEREEIiIIREWFERFQREQEREBERUFKIiCIiAiIgIiKgpREBERAREQEREBERAREQEREBERAREQEREEIiIP/2Q=="></div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-12"><img alt="image" class="img-fluid"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSl2ofiLk0rbiTQoJ5lBYKgcujIX6z5bChZZfCfj3vAUHz9CQQE&usqp=CAU"></div>
+          </div>
+        </div>
 
-					<p>Education is one of the most important sectors of our society. However, it is not given the importance it needs and some major shortcomings go unnoticed due
-						 to which our educational institutes do not yield the best productivity. One such factor is the psychological compatibility of the teachers which is ignored while hiring.
-						  The institutes at the primary and secondary levels cannot hire a psychologist only for recruitment. No such system exists which can perform this job. 
-						  The education system can be made more efficient if such evaluation is done while the hiring is done. Our motive is to build a chat-bot that can 
-						  psychologically evaluate the candidates and give us the best one for the job. </p>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="col-12 col-md-6 col-lg-5 ml-auto pt-5 pt-md-0">
+          <p>
+          </p>
+          <h1>Adding Value</h1>
+          <p class="lead">Making the Ai do the initial screening before assigning any human resource to the evaluation process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="team" class="fdb-block team-1" data-block-type="teams" data-id="9" draggable="true">
+    <div class="container">
+      <div class="row text-center justify-content-center">
+        <div class="col-8">
+          <h1>Our Team</h1>
+          <p class="lead">Passionte people and mentors.</p>
+        </div>
+      </div>
 
-	<div id="education">
-		<br><br>
-		<div class="container">
-			<h2 class="heading"> Meet The Team! </h2>
-			<div class="row">
-				<ul class="timeline">
-					<li class="start"><i class="fa fa-user-circle" style="color:#5F6161">  </i></li>
-					<li class="contain left">
-						<blockquote class="content" style="text-align: right">
-							<h4> Dr. Ali Tahir </h4>
-							<h3> Project Advisor </h3>
-						</blockquote> 
-					</li>
-					<li class="contain right">
-						<blockquote class="content blockquote-reverse">
-							<h4> Maham Masroor </h4>
-							<h3> Group Leader </h3>
-						</blockquote>
-					</li>
-					<li class="contain left">
-						<blockquote class="content" style="text-align: right">
-							<h4> Imran Haider </h4>
-							<h3> Co-Advisor </h3>
-						</blockquote> 
-					</li>
-					<li class="contain right">
-						<blockquote class="content blockquote-reverse">
-							<h4> Muhammad Sohaib Ishaq </h4>
-							<h3> Group Member </h3>
-						</blockquote>
-					</li>
-					<li class="start"> End </li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<br>
+      <div class="row-50"></div>
 
-	<div id="portfolio">
-		<div class="container">
-			<br><br>	
-			<h2 class="heading" style="color:white"> Technology </h2>
-			<h3 class="slogan" style="color:white; opacity: 0.4"> Follows three main steps: </h3>
-			<br>
-			<div class="row"> 
-				<div class="col-md-4">
-					<img class="img-responsive" src="img/chat.png">
-					<p class="project-text"> 1. Uses intelligrent Chatbot to have relavant conversation </p>
-				</div>
-				<div class="col-md-4">
-					<img class="img-responsive" src="img/brain.png">
-					<p class="project-text"> 2. The interview process is based on a Deep Learning Model </p>
-				</div>
-				<div class="col-md-4">
-					<img class="img-responsive" src="img/result.png">
-					<p class="project-text"> 3. After the interview, Results are efficiently calculated. </p>
-				</div>
-				<br><br><br>
-			</div>
+      <div class="row">
+        <div class="col-sm-3 text-left">
+          <div class="fdb-box p-0"><img alt="image" class="img-fluid rounded-0"
+              src="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//people/1.jpg">
+            <div class="content p-3">
+              <h3><strong>Sohaib Ishaq</strong></h3>
+              <p>Group Member</p>
+            </div>
+          </div>
+        </div>
 
-	</div>
+        <div class="col-sm-3 text-left">
+          <div class="fdb-box p-0"><img alt="image" class="img-fluid rounded-0"
+              src="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//people/2.jpg">
+            <div class="content p-3">
+              <h3><strong>Maham Masroor</strong></h3>
+              <p>Group Member</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 text-left">
+          <div class="fdb-box p-0"><img alt="image" class="img-fluid rounded-0"
+              src="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//people/3.jpg">
+            <div class="content p-3">
+              <h3><strong>Dr. Ali Tahir</strong></h3>
+              <p>Project Advisor</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 text-left">
+          <div class="fdb-box p-0"><img alt="image" class="img-fluid rounded-0"
+              src="https://cdn.jsdelivr.net/gh/froala/design-blocks@master/dist/imgs//people/6.jpg">
+            <div class="content p-3">
+              <h3><strong>Imran Haider</strong></h3>
+              <p>Co-Advisor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="fdb-block footer-large bg-dark" data-block-type="footers" data-id="6">
+    <div class="container">
+      <div class="row align-items-top text-center text-md-left">
+        <div class="col-12 col-sm-6 col-md-4">
+          <h3><strong>Sohaib Ishaq</strong></h3>
+          <p>Street Address 52<br>Contact Name</p>
+          <p>+44 827 312 5002</p>
+          <p><a href="">countrya@amazing.com</a></p>
+        </div>
 
-	<div id="blog">
-		<br><br>
-		<h2 class="heading"> Features </h2>
-		<h3 class="slogan"> Showcase of Some of my blogs </h3>
-		<br>
-		<div class="container-fluid">
-			<div class="row" style="text-align: center">
-				<a href=#>
-				<div class="col-md-3 blog-div" style="background-image:url(http://d2435vk4yevlyp.cloudfront.net/wp-content/uploads/2017/12/031-780x1170.jpg); background-size:cover; height: 105vh; opacity: 0.6">
-					<p class="blog-text">
-						<h3>Lost in the crowd ~</h3>
-						<h4>Sohaib </h4>
-					</p>
-				</div>
-			</a>
-				<a href=#>
-				<div class="col-md-3 blog-div" style="background-image:url(http://d2435vk4yevlyp.cloudfront.net/wp-content/uploads/2017/12/020-1440x960.jpg); background-size:cover; height: 52vh; opacity: 0.6">
-					<p class="blog-text">
-						<h3>The day we were born ~</h3>
-						<h4>Sohaib </h4>
-					</p>
-				</div>
-			</a>
-				<a href=#>
-				<div class="col-md-5 blog-div" style="background-image:url(http://d2435vk4yevlyp.cloudfront.net/wp-content/uploads/2017/12/027-1440x960.jpg); background-size:cover; height: 52vh; opacity: 0.6">
-					<p class="blog-text">
-						<h3>Lets go on another ride sometimes ~</h3>
-						<h4>Sohaib </h4>
-					</p>
-				</div>
-			</a>
-			<a href=#>
-				<div class="col-md-8 blog-div" style="background-image:url(http://d2435vk4yevlyp.cloudfront.net/wp-content/uploads/2017/12/060-1440x960.jpg); background-size:cover; height:50vh; opacity: 0.6">
-					<p class="blog-text">
-						<h3>Falling in love with the strangers ~</h3>
-						<h4>Sohaib </h4>
-					</p>
-				</div>
-			</a>
-			</div>
+        <div class="col-12 col-sm-6 col-md-4 mt-4 mt-sm-0">
+          <h3><strong>Maham Masroor</strong></h3>
+          <p>Street Address 100<br>Contact Name</p>
+          <p>+13 827 312 5002</p>
+          <p><a href="">countryb@amazing.com</a></p>
+        </div>
 
-			<div class="row collapse" id="more-blogs" >
-				<a href=#>
-				<div class="col-md-4 blog-div" style="background-image:url(http://d2435vk4yevlyp.cloudfront.net/wp-content/uploads/2017/12/041-1440x960.jpg); background-size:cover; height:50vh; opacity: 0.6">
-					<p class="blog-text">
-						<h3>A Skater's Paradise ~</h3>
-						<h4>Sohaib </h4>
-					</p>
-				</div>
-			</a>
-			<a href=#>
-				<div class="col-md-7 blog-div" style="background-image:url(http://d2435vk4yevlyp.cloudfront.net/wp-content/uploads/2017/12/050-1440x960.jpg); background-size:cover; height:50vh; opacity: 0.6">
-					<p class="blog-text">
-						<h3>The old you should never forget ~</h3>
-						<h4>Sohaib </h4>
-					</p>
-				</div>
-			</a>
-			<a href=#>
-				<div class="col-md-3 blog-div" style="background-image:url(http://d2435vk4yevlyp.cloudfront.net/wp-content/uploads/2017/12/029-780x1170.jpg); background-size:cover; height:105vh; opacity: 0.6">
-					<p class="blog-text">
-						<h3>Glow my life again ~</h3>
-						<h4>Ali Sadiq </h4>
-					</p>
-				</div>
-			</a>
-			<a href=#>
-				<div class="col-md-8 blog-div" style="background-image:url(http://d2435vk4yevlyp.cloudfront.net/wp-content/uploads/2017/12/043-1440x960.jpg); background-size:cover; height:52vh; opacity: 0.6">
-					<p class="blog-text">
-						<h3>You never know what is coming for you ~</h3>
-						<h4>Sohaib </h4>
-					</p>
-				</div>
-			</a>
-			<a href=#>
-				<div class="col-md-8 blog-div" style="background-image:url(http://d2435vk4yevlyp.cloudfront.net/wp-content/uploads/2017/12/018-1440x960.jpg); background-size:cover; height:52vh; opacity: 0.6">
-					<p class="blog-text">
-						<h3>Boomerang in your life ~</h3>
-						<h4>Sohaib </h4>
-					</p>
-				</div>
-			</a>
-		</div>
+        <div class="col-12 col-md-4 mt-5 mt-md-0 text-md-left">
+          <h3><strong>About Us</strong></h3>
+          <p>AI enabeled screening process for teachers that helps focus resources on the right candidates.</p>
+        </div>
+      </div>
 
-			<br>
-			<a class="btn btn-primary btn-lg" href="#more-blogs" data-toggle="collapse" style="color:white; background-color:#5F6161; border: none;"> More/Less Blogs </a>
-
-		</div>
-		<br><br>
-
-	</div>
-	
-
-	<div id="contact">
-		<br><br><br>
-		<h2 class="heading" style="color:white; display: inline-block"> Contact Us </h2>
-		<p><i class="fa fa-envelope" style="font-size:30px; color: #0081c1; padding-right: 5px"> </i> mishaq.bscs16seecs@seecs.edu.pk</p>
-		<h3 class="slogan"> Have a Query or Suggestion? </h3>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-3">
-					<h3 style="color:white"> Contact Us </h3>
-					<i class="fa fa-map-marker" style="font-size:26px; color: #0081c1; padding-right: 5px"> </i>
-					<p style="display: inline; opacity: 0.8"> National University of Science and Technology, H-12, Islamabad, 44000, Pakistan </p>
-
-
-	</div>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="js/scripts.js"></script>
-
+      <div class="row mt-5">
+        <div class="col text-center">
+          <p>© 2020 Psycruit. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/froala-editor/js/froala_editor.pkgd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 </body>
-</html>	
+
+</html>
